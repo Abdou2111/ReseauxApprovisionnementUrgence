@@ -30,4 +30,8 @@ public class Route {
     public double calculateCost() {
         return distance * transportCoefficient;
     }
+
+    public double getCost() {
+        return cost;
+    }
 }
