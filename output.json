@@ -1,0 +1,12 @@
+{
+  "niveauDemande": 10,
+  "priority": "HIGH",
+  "name": "Paris",
+  "id": 1,
+  "x": 0,
+  "y": 0,
+  "coord": [
+    0,
+    0
+  ]
+}

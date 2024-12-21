@@ -1,0 +1,29 @@
+{
+  "node1": {
+    "niveauDemande": 10,
+    "priority": "HIGH",
+    "name": "Paris",
+    "id": 1,
+    "x": 0,
+    "y": 0,
+    "coord": [
+      0,
+      0
+    ]
+  },
+  "node2": {
+    "niveauDemande": 20,
+    "priority": "MEDIUM",
+    "name": "Lyon",
+    "id": 2,
+    "x": 0,
+    "y": 10,
+    "coord": [
+      0,
+      10
+    ]
+  },
+  "distance": 10.0,
+  "cost": 10.0,
+  "transportCoefficient": 1
+}
