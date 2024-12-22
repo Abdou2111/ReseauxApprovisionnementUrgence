@@ -1,4 +1,6 @@
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
@@ -73,7 +75,11 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
 
     @Override
     public Iterable<E> edges() {
-        return null;
+        List<E> edgeList = new ArrayList<>();
+        for (Map<V, E> map : adjacencyMap.values()) {
+            edgeList.addAll(map.values());
+        }
+        return edgeList;
     }
     @Override
     public Iterable<V> adjacentVertices(V vertex) {

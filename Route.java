@@ -41,5 +41,16 @@ public class Route implements Edge<Double> {
         return cost;
     }
 
-    
+    public Route getRoute() {
+        return this;
+    }
+
+    public Double getCost() {
+        return cost;
+    }
+
+    @Override
+    public String toString() {
+        return "(" + endpoints[0].getName() + ", " + endpoints[1].getName() + ")";
+    }
 }

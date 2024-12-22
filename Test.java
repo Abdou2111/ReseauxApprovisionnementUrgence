@@ -2,11 +2,10 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
-public class NetworkApp {
+public class Test {
+    private static AbstractVertex ville1, ville2, ville3, entrepotX, entrepotY, entrepotZ;
     static AbstractVertex[] vertices;
     private static Iterable<Route> routes;
 
@@ -14,7 +13,6 @@ public class NetworkApp {
         retrieveTest("tests/TestCase1.txt");
         Graph<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
 
-        // Insert all vertices and edges into the graph_____________________
         for (AbstractVertex source : vertices) {
             for (AbstractVertex destination : vertices) {
                 if (!source.equals(destination)) {
@@ -22,15 +20,19 @@ public class NetworkApp {
                 }
             }
         }
-        //_________________________________________________________________
         routes = reseau.edges();
+        System.out.println("Num vertices: " + reseau.numVertices());
+        System.out.println("Num edges: " + reseau.numEdges());
+        for(Route route : routes){
+            System.out.println( "Cost of route " + route.toString() + " = " + route.getCost());
+        }
+        //System.out.println("Edges: " + costs);
         System.out.println(reseau.toString());
         JSONHandler.generateOutput(reseau);
 
 
     }
 
-    //_______________________________________________________________________________
     // Method to retrieve the test case from a file
     private static void retrieveTest(String path) throws IOException {
         List<AbstractVertex> vertexList = new ArrayList<>();
@@ -66,5 +68,18 @@ public class NetworkApp {
             return Integer.parseInt(string.substring(string.indexOf("(") + 1, length));
         }
         return Integer.parseInt(string.substring(0, length-1));
+    }
+
+    private static void createExample(){
+        ville1 = new Ville("City 1", 1, 2, 3, 50, Priority.HIGH);
+        ville2 = new Ville("City 2", 2, 5, 7, 30, Priority.MEDIUM);
+        ville3 = new Ville("City 3", 3, 8, 2, 20, Priority.LOW);
+        entrepotX = new Entrepot("Warehouse 101", 101, 10, 20, 100);
+        entrepotY = new Entrepot("Warehouse 102", 102, 15, 25, 50);
+        entrepotZ = new Entrepot("Warehouse 103", 103, 20, 35, 110);/*
+        route1 = new Route(ville2, entrepotX);
+        route2 = new Route(ville2, entrepotY);
+        route3 = new Route(ville2, entrepotZ);*/
+        vertices = new AbstractVertex[]{ville1, ville2, ville3, entrepotX, entrepotY, entrepotZ};
     }
 }

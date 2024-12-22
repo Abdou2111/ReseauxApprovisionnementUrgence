@@ -2,7 +2,9 @@ import com.google.gson.*;
 
 import java.io.*;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class JSONHandler {
     public static void writeJSON(Object object) throws IOException {
@@ -21,5 +23,31 @@ public class JSONHandler {
 
         T[] object = gson.fromJson(bufferedReader, classe);
         return Arrays.asList(object);
+    }
+
+    static Map<String, Map<String, Double>> generateCostMatrix(Graph<AbstractVertex, Route> graph) {
+        Map<String, Map<String, Double>> costMatrix = new HashMap<>();
+
+        for (AbstractVertex source : NetworkApp.vertices) {
+            if (source instanceof Entrepot) {
+                for (AbstractVertex destination : NetworkApp.vertices) {
+                    if (destination instanceof Ville) {
+                        Route route = graph.getEdge(source, destination);
+                        if (route != null) {
+                            costMatrix
+                                    .computeIfAbsent(destination.getName(), k -> new HashMap<>())
+                                    .put(source.getName(), route.getCost());
+                        }
+                    }
+                }
+            }
+        }
+
+        return costMatrix;
+    }
+
+    public static void generateOutput(Graph<AbstractVertex, Route> reseau) throws IOException {
+        Map<String, Object> wrappedCostMatrix = Map.of("Cost Matrix", JSONHandler.generateCostMatrix(reseau));
+        writeJSON(wrappedCostMatrix);
     }
 }
