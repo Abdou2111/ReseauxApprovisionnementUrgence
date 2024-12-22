@@ -1,12 +1,1 @@
-{
-  "niveauDemande": 50,
-  "priority": "HIGH",
-  "name": "City 1",
-  "id": 1,
-  "x": 2,
-  "y": 3,
-  "coord": [
-    2,
-    3
-  ]
-}
+null

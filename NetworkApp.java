@@ -1,4 +1,8 @@
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class NetworkApp {
     private static AbstractVertex ville1, ville2, ville3, entrepotX, entrepotY, entrepotZ;
@@ -6,12 +10,8 @@ public class NetworkApp {
     private static Route route1, route2, route3;
 
     public static void main(String[] args) throws IOException {
-        createExample();
+        retrieveTest("tests/TestCase1.txt");
         Graph<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
-
-        System.out.println(route1.getElement());
-        System.out.println(route2.getElement());
-        System.out.println(route3.getElement());
 
         for (AbstractVertex source : vertices) {
             for (AbstractVertex destination : vertices) {
@@ -22,8 +22,44 @@ public class NetworkApp {
         }
 
         System.out.println(reseau.toString());
-                JSONHandler.writeJSON(ville1);
 
+    }
+
+    // Method to retrieve the test case from a file
+    private static void retrieveTest(String path) throws IOException {
+        List<AbstractVertex> vertexList = new ArrayList<>();
+        try (BufferedReader br = new BufferedReader(new FileReader(path))) {
+            String line;
+            while ((line = br.readLine()) != null) {
+                if (line.startsWith("City")) {
+                    String[] parts = line.split(", ");
+                    String name = parts[0].split(": ")[0];
+                    int id = Integer.parseInt(parts[0].split(" = ")[1]);
+                    int x = retrieveCoordinates(parts[1]);
+                    int y = retrieveCoordinates(parts[2]);
+                    int demand = Integer.parseInt(parts[3].split(" = ")[1].split(" ")[0]);
+                    Priority priority = Priority.valueOf(parts[4].split(" = ")[1].toUpperCase());
+                    vertexList.add(new Ville(name, id, x, y, demand, priority));
+                } else if (line.startsWith("Warehouse ")) {
+                    String[] parts = line.split(", ");
+                    String name = parts[0].split(": ")[0];
+                    int id = Integer.parseInt(parts[0].split(" = ")[1]);
+                    int x = retrieveCoordinates(parts[1]);
+                    int y = retrieveCoordinates(parts[2]);
+                    int capacity = Integer.parseInt(parts[3].split(" = ")[1].split(" ")[0]);
+                    vertexList.add(new Entrepot(name, id, x, y, capacity));
+                }
+            }
+        }
+        vertices = vertexList.toArray(new AbstractVertex[0]);
+    }
+
+    private static int retrieveCoordinates(String string){
+        int length = string.length();
+        if(string.contains("(")){
+            return Integer.parseInt(string.substring(string.indexOf("(") + 1, length));
+        }
+        return Integer.parseInt(string.substring(0, length-1));
     }
 
     private static void createExample(){
