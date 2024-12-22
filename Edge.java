@@ -1,4 +1,8 @@
+/**
+ * l'interface Edge<E> représente une arête d'un graphe. Elle est paramétrée
+ * par le type générique E, qui représente l'élément associé à l'arête.
+ */
 public interface Edge<E> {
-    // Return the element that is associated with the edge.
-    E getElement();
+    // Retourne l'élément associé à une arête
+    E getCost();
 }
