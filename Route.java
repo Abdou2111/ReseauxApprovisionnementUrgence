@@ -1,19 +1,24 @@
-public class Route {
-    private Node node1;
-    private Node node2;
-    private double distance, cost;
+public class Route implements Edge<Double> {
+    private AbstractVertex[] endpoints;
+    private Double cost, distance;
     private int transportCoefficient;
 
-
-    public Route(Node node1, Node node2) {
-        this.node1 = node1;
-        this.node2 = node2;
-        this.distance = calculateDistance();
-        this.transportCoefficient = calculateTransportCoefficient();
+    public Route(AbstractVertex u, AbstractVertex v) {
+        endpoints = new AbstractVertex[] {u, v};
+        distance = calculateDistance();
+        transportCoefficient = calculateTransportCoefficient();
         this.cost = calculateCost();
     }
+
+
+
+    public AbstractVertex[] getEndpoints() {
+        return endpoints;
+    }
+    
     public double calculateDistance() {
-        return Math.sqrt(Math.pow(node1.getX() - node2.getX(), 2) + Math.pow(node1.getY() - node2.getY(), 2));
+        return Math.sqrt(Math.pow(endpoints[0].getX() - endpoints[1].getX(), 2) 
+                        + Math.pow(endpoints[0].getY() - endpoints[1].getY(), 2));
     }
     public int calculateTransportCoefficient() {
         if(distance <= 10){
@@ -31,7 +36,10 @@ public class Route {
         return distance * transportCoefficient;
     }
 
-    public double getCost() {
+    @Override
+    public Double getElement() {
         return cost;
     }
+
+    
 }

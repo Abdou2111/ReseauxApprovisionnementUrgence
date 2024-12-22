@@ -1,4 +1,4 @@
-public class Ville extends Node{
+public class Ville extends AbstractVertex {
     private int niveauDemande;
     private Priority priority;
 
@@ -6,5 +6,11 @@ public class Ville extends Node{
         super(name, id, x, y);
         this.niveauDemande = niveauDemande;
         this.priority = priority;
+    }
+
+
+    @Override
+    public AbstractVertex getElement() {
+        return null;
     }
 }

@@ -1,5 +1,3 @@
-
-
 import com.google.gson.*;
 
 import java.io.*;
@@ -7,7 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class JSONHandler {
-    static void writeJSON(Object object) throws IOException {
+    public static void writeJSON(Object object) throws IOException {
         GsonBuilder builder = new GsonBuilder();
         Gson gson = builder.setPrettyPrinting().create();
         FileWriter writer = new FileWriter("output.json");
