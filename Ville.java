@@ -13,6 +13,7 @@ public class Ville extends AbstractVertex {
         this.priority = priority;
     }
 
+    public Priority getPriority() { return priority; }
 
     @Override
     public AbstractVertex getElement() { return null; }
