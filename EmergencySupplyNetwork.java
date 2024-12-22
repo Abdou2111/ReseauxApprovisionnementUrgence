@@ -96,4 +96,21 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
         return count;
     }
 
+    @Override
+    public String toString() {
+        StringBuilder sb = new StringBuilder();
+        for (V vertex : adjacencyMap.keySet()) {
+            sb.append(((AbstractVertex) vertex).getName()).append(" -> ");
+            for (V adjacent : adjacencyMap.get(vertex).keySet()) {
+                sb.append(((AbstractVertex) adjacent).getName()).append(", ");
+            }
+            if (adjacencyMap.get(vertex).isEmpty()) {
+                sb.append("No adjacent vertices");
+            } else {
+                sb.setLength(sb.length() - 2); // Remove the trailing comma and space
+            }
+            sb.append("\n");
+        }
+        return sb.toString();
+    }
 }

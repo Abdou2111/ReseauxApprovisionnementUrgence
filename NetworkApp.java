@@ -13,11 +13,16 @@ public class NetworkApp {
         System.out.println(route2.getElement());
         System.out.println(route3.getElement());
 
-        for (AbstractVertex vertex : vertices) {
-            reseau.insertVertex(vertex);
+        for (AbstractVertex source : vertices) {
+            for (AbstractVertex destination : vertices) {
+                if (!source.equals(destination)) {
+                    reseau.insertEdge(source, destination, new Route(source, destination));
+                }
+            }
         }
 
-        JSONHandler.writeJSON(ville1);
+        System.out.println(reseau.toString());
+                JSONHandler.writeJSON(ville1);
 
     }
 

@@ -19,4 +19,8 @@ public abstract class AbstractVertex implements Vertex {
     public int getY() {
         return y;
     }
+
+    public String getName() {
+        return name;
+    }
 }
