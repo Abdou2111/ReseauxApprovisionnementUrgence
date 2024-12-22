@@ -1,6 +1,11 @@
 {
   "Cost Matrix": {
     "City C": {
+      "Warehouse z": 20.09975124224178,
+      "Warehouse Y": 1.0,
+      "Warehouse X": 24.08318915758459
+    },
+    "City D": {
       "Warehouse z": 1.4142135623730951,
       "Warehouse Y": 9.055385138137417,
       "Warehouse X": 39.395431207184416

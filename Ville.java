@@ -13,4 +13,8 @@ public class Ville extends AbstractVertex {
     public AbstractVertex getElement() {
         return null;
     }
+
+    public Priority getPriority() {
+        return priority;
+    }
 }

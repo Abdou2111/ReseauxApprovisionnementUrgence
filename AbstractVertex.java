@@ -23,8 +23,4 @@ public abstract class AbstractVertex implements Vertex {
     public String getName() {
         return name;
     }
-
-    public int getId() {
-        return id;
-    }
 }
