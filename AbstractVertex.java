@@ -5,11 +5,11 @@
  *   ainsi que des coordonnées dans un espace 2D (x, y).
  * - Les coordonnées sont accessibles sous forme d'un tableau.
  */
+@SuppressWarnings("rawtypes")
 public abstract class AbstractVertex implements Vertex {
     private String name;    // Nom du sommet
     private int id;         // Identifiant du sommet
     private int x, y;       // Coordonnées du sommet
-    private int[] coord;
 
     // ==================== Constructeur ==================== 
     public AbstractVertex(String name, int id, int x, int y) {
@@ -17,22 +17,14 @@ public abstract class AbstractVertex implements Vertex {
         this.id = id;
         this.x = x;
         this.y = y;
-        this.coord = new int[] {x, y};
     }
 
     // ==================== Getterss ====================
-    public int getX() {
-        return x;
-    }
+    public int getX() { return x; }
 
-    public int getY() {
-        return y;
-    }
+    public int getY() { return y; }
 
-    public String getName() {
-        return name;
-    }
-    public int getId() {
-        return id;
-    }
+    public String getName() { return name; }
+    
+    public int getId() { return id; }
 }

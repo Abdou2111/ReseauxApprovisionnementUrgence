@@ -10,4 +10,3 @@ compréhension et joyeuses fêtes de fin d'année!
            Abdelghafour Rahmouni 20246224
            Marc Olivier Jean Paul 20241763
 =========================================================================
-*/

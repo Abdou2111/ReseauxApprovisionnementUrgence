@@ -13,8 +13,9 @@ public class DynamiqueResourceSharing {
         }
     }
 
+    @SuppressWarnings("rawtypes")
     public void mergeClusters(List<Entrepot> entrepots, EmergencySupplyNetwork reseau) {
-        int clusterId = 1;
+        
         Set<Set<Ville>> beforeMerge = new HashSet<>(clusters);
 
         for (Entrepot entrepot : entrepots) {

@@ -23,13 +23,12 @@ public class Route implements Edge<Double> {
     }
 
     // ==================== Getter ====================
-
     @Override
     public Double getCost() { return cost; }
     
     // Méthode pour calculer la distance entre deux sommets
     public double calculateDistance() {
-        return Math.sqrt(Math.pow(endpoints[0].getX() - endpoints[1].getX(), 2) 
+        return Math.sqrt(Math.pow(endpoints[0].getX() - endpoints[1].getX(), 2)
                     + Math.pow(endpoints[0].getY() - endpoints[1].getY(), 2));
     }
 
@@ -48,6 +47,7 @@ public class Route implements Edge<Double> {
 
     @Override
     public String toString() {
-        return "(" + endpoints[0].getName() + ", " + endpoints[1].getName() + ")";
+        return "(" + endpoints[0].getName() + ", " 
+                + endpoints[1].getName() + ")";
     }
 }

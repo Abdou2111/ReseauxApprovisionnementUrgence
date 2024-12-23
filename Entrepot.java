@@ -17,21 +17,20 @@ public class Entrepot extends AbstractVertex {
         this.villes = new HashSet<>();
     }
 
+    // ==================== Getters ====================
     @Override
     public AbstractVertex getElement() { return null; }
 
-    public double getCapacite() {
-        return capacity;
-    }
+    public double getCapacite() { return capacity; }
 
+    public Collection<Ville> getVilles() { return this.villes; }
+
+    // ==================== Setter ====================
     public void setCapacite(double capacity) {
         this.capacity = capacity;
     }
 
-    public Collection<Ville> getVilles() {
-        return this.villes;
-    }
-
+    // Permet d'ajouter une ville dans la liste des villes du graphe
     public void addVille(Ville ville) {
         villes.add(ville);
     }

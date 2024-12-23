@@ -1,13 +1,10 @@
 import java.util.Comparator;
-
-
 /**
  * La classe PriorityComparator sert de comparaison entre 
  * deux villes pour savoir laquelle à le plus haut niveau de
  * priorité.
  */
 public class PriorityComparator implements Comparator<Ville> {
-
     /**
      * La méthode compare va comparer les priorités des villes V1 et V2.
      * Elle retourne:

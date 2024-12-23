@@ -1,6 +1,3 @@
-import java.util.List;
-import java.util.PriorityQueue;
-
 /**
  * l'interface Graph<V, E> est la représentation abstraite d'un graphe.
  * Elle est paramétrée par deux types :
@@ -25,6 +22,7 @@ public interface Graph<V,E> {
 
     // Ajouter une nouvelle arête au graphe
     void insertEdge( V u, V v, E edge ) throws IllegalArgumentException;
+
     // Retourne l'arête reliant deux sommets
     E getEdge( V u, V v );
 
