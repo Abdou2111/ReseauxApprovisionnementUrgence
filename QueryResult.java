@@ -7,14 +7,6 @@ public class QueryResult {
         this.result = result;
     }
 
-    public String getQuery() {
-        return query;
-    }
-
-    public String getResult() {
-        return result;
-    }
-
     @Override
     public String toString() {
         return "{\"Query\": \"" + query + "\", \"Result\": \"" + result + "\"}";

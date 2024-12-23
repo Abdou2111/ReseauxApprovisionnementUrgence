@@ -13,91 +13,58 @@ public class NetworkApp {
     static List<Transfer> transfers = new ArrayList<>();
     static List<Set<Ville>> initialClusters= new ArrayList<>();
     static List<Set<Ville>> finalClusters= new ArrayList<>();
-    static List<MergingStep> mergingSteps = new ArrayList<>();
     static List<QueryResult> queryResults = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        retrieveTest("tests/TestCase3.txt");
-        EmergencySupplyNetwork<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
+        // List of test files
+        String[] testFiles = {"tests/TestCase1.txt", "tests/TestCase2.txt"};
+        String[] outputFiles = {"tests/Output_TestCase1.json", "tests/Output_TestCase2.json"};
 
-        // Tache1: Initialisation du graphe_____________________________________________________
+        for (int i = 0; i < testFiles.length; i++) {
+            processTestFile(testFiles[i], outputFiles[i]);
+        }
+    }
 
+    private static void processTestFile(String testFilePath, String outputFilePath) throws IOException {
+        retrieveTest(testFilePath);
+
+        // Initialize the graph and other necessary components
+        EmergencySupplyNetwork<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<>();
+
+        // Task 1: Initialize the graph
         reseau.representGraph();
 
-        //Tache2: Allocation des ressources______________________________________________
-
+        // Task 2: Allocate resources
         PriorityQueue<Ville> pQueue = new PriorityQueue<>(new PriorityComparator());
-
-        // On ajoute les villes dans la priority queue en fonction de leur priorité
         for (Ville ville : villes) {
             pQueue.add(ville);
         }
         reseau.allocateResources(pQueue, entrepots);
-        for(Entrepot entrepot : entrepots){
+        remainingCapacities.clear();
+        for (Entrepot entrepot : entrepots) {
             remainingCapacities.add((double) entrepot.getCapacite());
         }
 
-        //Tache3: Redistribution des ressources______________________________________________
-
-        //Initialisation des heaps
+        // Task 3: Redistribute resources
         CapacityComparator capacityComparator = new CapacityComparator();
         PriorityQueue<Entrepot> maxHeap = new PriorityQueue<>(capacityComparator.reversed());
         PriorityQueue<Entrepot> minHeap = new PriorityQueue<>(capacityComparator);
-
-        // On ajoute les entrepots dans les heaps
         ResourceRedistribution resourceRedistribution = new ResourceRedistribution(entrepots, maxHeap, minHeap);
-
-        // On redistribue les ressources
         resourceRedistribution.redistributeResources(maxHeap, minHeap);
 
-        // Affichage des ressources finales
-        System.out.println();
-        System.out.println("Final Resource Levels:");
-        for (Entrepot entrepot : entrepots) {
-            System.out.println("Warehouse " + entrepot.getId() + ": " + entrepot.getCapacite() + " units");
-        }
-        System.out.println();
-
-        //Tache4: Partage dynamique des ressources entre les villes______________________________________
+        // Task 4: Dynamic resource sharing
         DynamiqueResourceSharing dynamiqueResourceSharing = new DynamiqueResourceSharing(villes);
-
-        System.out.println(dynamiqueResourceSharing.clustersToString());
-
-        List<Set<Ville>> initialClustersCopy = new ArrayList<>();
+        initialClusters.clear();
         for (Set<Ville> cluster : dynamiqueResourceSharing.getClusters()) {
-            Set<Ville> clusterCopy = new HashSet<>(cluster);
-            initialClustersCopy.add(clusterCopy);
+            initialClusters.add(new HashSet<>(cluster));
         }
-        initialClusters = initialClustersCopy;
-
-
         dynamiqueResourceSharing.mergeClusters(entrepots, reseau);
         finalClusters = dynamiqueResourceSharing.getClusters();
-
         queryResults = dynamiqueResourceSharing.generateQueryResults(villes);
-        for (QueryResult result : queryResults) {
-            System.out.println(result);
-        }
 
-/*
-        //------------------------------------------------------------------------------------------------
-        Collection<Ville> villes = entrepots.get(0).getVilles();
-        for(Ville ville : villes){
-            System.out.println(ville.getName());
-        }
-        List<Entrepot> e =  reseau.getEntrepots();
-        for(Entrepot entrepot : e){
-            System.out.println(entrepot.getVilles());
-        }
-
-        System.out.println(dynamiqueResourceSharing.clusterToString());
-        //------------------------------------------------------------------------------------------------*/
-
-        // Generer le fichier JSON
-        JSONHandler.generateOutput(reseau,"output.json");
-        //TODO: add another json file for the other test case
+        // Generate the JSON output
+        JSONHandler.generateOutput(reseau, outputFilePath);
     }
-
     //_______________________________________________________________________________
     // Method to retrieve the test case from a file
     private static void retrieveTest(String path) throws IOException {

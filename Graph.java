@@ -17,9 +17,6 @@ public interface Graph<V,E> {
     // Retourne le nombre d'arêtes du graphe
     int numEdges();
 
-    // Retourne un itérable de tous les sommets du graphe
-    Iterable<V> vertices();
-
     // Retourne un itérable de toutes les arêtes du graphe
     Iterable<E> edges();
 
@@ -28,25 +25,10 @@ public interface Graph<V,E> {
 
     // Ajouter une nouvelle arête au graphe
     void insertEdge( V u, V v, E edge ) throws IllegalArgumentException;
-
-    // Retirer un sommet du graphe
-    void removeVertex( V vertex );
-
-    // Retirer une arête du graphe
-    void removeEdge( V u, V v );
-
-    // Vérifie si deux sommets sont reliés par une arête
-    boolean areAdjacent( V u, V v );
-
     // Retourne l'arête reliant deux sommets
     E getEdge( V u, V v );
 
-    // Retourne un itérable de tous les sommets adjacent au sommet vertex
-    Iterable<V> adjacentVertices( V vertex );
 
-    // Retourne le nombre d'arêtes d'un sommet
-    int outDegree( V vertex );
-    int inDegree( V vertex );
 
 
 }

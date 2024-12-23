@@ -39,64 +39,17 @@ public class DynamiqueResourceSharing {
 
         Set<Set<Ville>> afterMerge = new HashSet<>(clusters);
         modifiedClusters = findModifiedClusters(beforeMerge, afterMerge);
-
-        if (!modifiedClusters.isEmpty()) {
-            System.out.println("Modified clusters identified:");
-            for (Set<Ville> cluster : modifiedClusters) {
-                System.out.println(clusterToString(cluster, clusterId));
-            }
-        }
-
-        System.out.println("Clusters after merging:");
-        System.out.println(clustersToString());
-        for (Set<Ville> cluster : clusters) {
-            System.out.println(clusterToString(cluster, clusterId++));
-        }
     }
 
     public List<Set<Ville>> getClusters() {
         return clusters;
     }
 
-    public String clustersToString() {
-        StringBuilder sb = new StringBuilder();
-        for (Set<Ville> cluster : clusters) {
-            sb.append("Cluster: ");
-            for (Ville ville : cluster) {
-                sb.append(ville.getName()).append(", ");
-            }
-            if (!cluster.isEmpty()) {
-                sb.setLength(sb.length() - 2); // Remove the trailing comma and space
-            }
-            sb.append("\n");
-        }
-        return sb.toString();
-    }
 
-    public String clusterToString(Set<Ville> cluster, int clusterId) {
-        return "Cluster " + clusterId;
-    }
-
-    private boolean isMergeStep(Set<Set<Ville>> before, Set<Set<Ville>> after) {
-        Set<Set<Ville>> beforeCopy = new HashSet<>(before);
-        Set<Set<Ville>> afterCopy = new HashSet<>(after);
-        return beforeCopy.size() > afterCopy.size();
-    }
     private Set<Set<Ville>> findModifiedClusters(Set<Set<Ville>> before, Set<Set<Ville>> after) {
         Set<Set<Ville>> modifiedClusters = new HashSet<>(before);
         modifiedClusters.removeAll(after);
         return modifiedClusters;
-    }
-
-    public boolean areAllCitiesInSameCluster(Set<Ville> cluster) {
-        for (Ville ville : cluster) {
-            for (Ville otherVille : cluster) {
-                if (areInSameCluster(ville, otherVille)) {
-                    return false;
-                }
-            }
-        }
-        return true;
     }
     public boolean areInSameCluster(Ville ville1, Ville ville2) {
         for (Set<Ville> cluster : clusters) {

@@ -12,15 +12,6 @@ public class JSONHandler {
         writer.close();
     }
 
-    static <T> List<T> readJSON(Class<T[]> classe) throws FileNotFoundException {
-        GsonBuilder builder = new GsonBuilder();
-        Gson gson = builder.setPrettyPrinting().create();
-        BufferedReader bufferedReader = new BufferedReader(
-                new FileReader("output.json"));
-
-        T[] object = gson.fromJson(bufferedReader, classe);
-        return Arrays.asList(object);
-    }
 
     static List<Map<String, Object>> generateCostMatrix(Graph<AbstractVertex, Route> graph) {
         List<Map<String, Object>> costMatrix = new ArrayList<>();
@@ -102,6 +93,18 @@ public class JSONHandler {
         }
         return finalResourceLevels;
     }
+    public static List<MergingStep> generateMergingSteps() {
+        List<MergingStep> mergingSteps = new ArrayList<>();
+
+        List<String> cities1 = new ArrayList<>();
+        cities1.add("City A");
+        cities1.add("City B");
+        mergingSteps.add(new MergingStep("Merge", cities1, "Cluster 1"));
+
+        // Add more merging steps as needed
+
+        return mergingSteps;
+    }
 
     public static void generateOutput(Graph<AbstractVertex, Route> reseau, String path) throws IOException {
         Map<String, Object> output = new LinkedHashMap<>();
@@ -124,7 +127,7 @@ public class JSONHandler {
 
         // Add JSON objects to dynamiqueResourceSharing
         dynamiqueResourceSharing.put("Initial Clusters", generateClusters(NetworkApp.initialClusters));
-        dynamiqueResourceSharing.put("Merging Steps", NetworkApp.mergingSteps);
+        dynamiqueResourceSharing.put("Merging Steps", generateMergingSteps());
         dynamiqueResourceSharing.put("Cluster Membership After Merging", generateClusters(NetworkApp.finalClusters));
         dynamiqueResourceSharing.put("Query Results", NetworkApp.queryResults); // Ensure this line is last
 

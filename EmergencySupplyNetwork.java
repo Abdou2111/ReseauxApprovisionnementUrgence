@@ -151,11 +151,6 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
                                             ville.getPriority(),
                                             bestEntrepot.getName(),
                                             (int) (capacite - bestEntrepot.getCapacite())));
-
-                System.out.println("Allocating resources from " + bestEntrepot.getName() + " to " + ville.getName());
-                System.out.println("Remaining demand for " + ville.getName() + ": " + ville.getDemande());
-                System.out.println("Remaining capacity for " + bestEntrepot.getName() + ": " + bestEntrepot.getCapacite());
-                System.out.println();
             }
         } catch (NullPointerException e) {
             System.out.println("All resources have been allocated");
@@ -194,15 +189,4 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
         }
         return sb.toString();
     }
-
-    public List<Entrepot> getEntrepots() {
-        List<Entrepot> entrepots = new ArrayList<>();
-        for (V vertex : adjacencyMap.keySet()) {
-            if (vertex instanceof Entrepot) {
-                entrepots.add((Entrepot) vertex);
-            }
-        }
-        return entrepots;
-    }
-
 }

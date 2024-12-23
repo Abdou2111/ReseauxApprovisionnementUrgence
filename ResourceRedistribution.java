@@ -42,7 +42,6 @@ public class ResourceRedistribution {
                 minHeap.add(minEntrepot);
             }
             NetworkApp.transfers.add(new Transfer(maxEntrepot.getName(), minEntrepot.getName(), aRecevoir));
-            System.out.println("Transferred " + aRecevoir + " units from " + maxEntrepot.getName() + " to " + minEntrepot.getName());
 
         }
     }

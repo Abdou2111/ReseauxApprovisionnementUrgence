@@ -23,7 +23,6 @@ public class Route implements Edge<Double> {
     }
 
     // ==================== Getter ====================
-    public AbstractVertex[] getEndpoints() { return endpoints; }
 
     @Override
     public Double getCost() { return cost; }
