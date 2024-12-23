@@ -41,14 +41,8 @@ public class ResourceRedistribution {
             if (minEntrepot.getCapacite() < 50) {
                 minHeap.add(minEntrepot);
             }
-
-            System.out.println("Redistributing resources from " + maxEntrepot.getName() + " to " + minEntrepot.getName());System.out.println("Final Resource Levels:");
-            for (Entrepot entrepot : maxHeap) {
-                System.out.println("Warehouse " + entrepot.getId() + ": " + entrepot.getCapacite() + " units");
-            }
-            for (Entrepot entrepot : minHeap) {
-                System.out.println("Warehouse " + entrepot.getId() + ": " + entrepot.getCapacite() + " units");
-            }
+            NetworkApp.transfers.add(new Transfer(maxEntrepot.getName(), minEntrepot.getName(), aRecevoir));
+            System.out.println("Transferred " + aRecevoir + " units from " + maxEntrepot.getName() + " to " + minEntrepot.getName());
 
         }
     }

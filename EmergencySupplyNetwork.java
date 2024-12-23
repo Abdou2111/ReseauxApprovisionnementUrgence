@@ -136,12 +136,22 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
                     // Si la demande est inférieure à la capacité de l'entrepot
                     bestEntrepot.setCapacite(capacite - niveauDemande);
                     ville.setDemande(0);
+                    // Add the city to the warehouse's villes attribute
+                    bestEntrepot.addVille(ville);
+
                 } else {
                     // Si la demande est supérieure à la capacité de l'entrepot
                     bestEntrepot.setCapacite(0);
                     ville.setDemande(niveauDemande - capacite);
                     pQueue.add(ville);
                 }
+
+                // Add the allocation to the list of allocations
+                NetworkApp.allocations.add(new Allocation(ville.getName(),
+                                            ville.getPriority(),
+                                            bestEntrepot.getName(),
+                                            (int) (capacite - bestEntrepot.getCapacite())));
+
                 System.out.println("Allocating resources from " + bestEntrepot.getName() + " to " + ville.getName());
                 System.out.println("Remaining demand for " + ville.getName() + ": " + ville.getDemande());
                 System.out.println("Remaining capacity for " + bestEntrepot.getName() + ": " + bestEntrepot.getCapacite());
@@ -183,5 +193,15 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
             sb.append("\n");
         }
         return sb.toString();
+    }
+
+    public List<Entrepot> getEntrepots() {
+        List<Entrepot> entrepots = new ArrayList<>();
+        for (V vertex : adjacencyMap.keySet()) {
+            if (vertex instanceof Entrepot) {
+                entrepots.add((Entrepot) vertex);
+            }
+        }
+        return entrepots;
     }
 }

@@ -8,13 +8,19 @@ public class NetworkApp {
     static Iterable<Route> routes;
     static List<Ville> villes = new ArrayList<>();
     static List<Entrepot> entrepots = new ArrayList<>();
+    static List<Allocation> allocations = new ArrayList<>();
+    static List<Double> remainingCapacities = new ArrayList<>();
+    static List<Transfer> transfers = new ArrayList<>();
+    static List<Cluster> initialClusters = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         retrieveTest("tests/TestCase3.txt");
         EmergencySupplyNetwork<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
 
         // Tache1: Initialisation du graphe_____________________________________________________
+
         reseau.representGraph();
+
         //Tache2: Allocation des ressources______________________________________________
 
         PriorityQueue<Ville> pQueue = new PriorityQueue<>(new PriorityComparator());
@@ -24,21 +30,53 @@ public class NetworkApp {
             pQueue.add(ville);
         }
         reseau.allocateResources(pQueue, entrepots);
+        for(Entrepot entrepot : entrepots){
+            remainingCapacities.add((double) entrepot.getCapacite());
+        }
 
         //Tache3: Redistribution des ressources______________________________________________
+
+        //Initialisation des heaps
         CapacityComparator capacityComparator = new CapacityComparator();
         PriorityQueue<Entrepot> maxHeap = new PriorityQueue<>(capacityComparator.reversed());
         PriorityQueue<Entrepot> minHeap = new PriorityQueue<>(capacityComparator);
 
+        // On ajoute les entrepots dans les heaps
         ResourceRedistribution resourceRedistribution = new ResourceRedistribution(entrepots, maxHeap, minHeap);
-        resourceRedistribution.redistributeResources(maxHeap, minHeap);
-        System.out.println("Max heap: " + maxHeap);
-        System.out.println("Min heap: " + minHeap);
 
+        // On redistribue les ressources
+        resourceRedistribution.redistributeResources(maxHeap, minHeap);
+
+        // Affichage des ressources finales
+        System.out.println();
+        System.out.println("Final Resource Levels:");
+        for (Entrepot entrepot : entrepots) {
+            System.out.println("Warehouse " + entrepot.getId() + ": " + entrepot.getCapacite() + " units");
+        }
+        System.out.println();
+
+        //Tache4: Partage dynamique des ressources entre les villes______________________________________
+        DynamiqueResourceSharing dynamiqueResourceSharing = new DynamiqueResourceSharing(villes);
+
+        System.out.println("Clusters:" + dynamiqueResourceSharing.getClusters());
+        dynamiqueResourceSharing.mergeClusters(entrepots, reseau);
+/*
+        //------------------------------------------------------------------------------------------------
+        Collection<Ville> villes = entrepots.get(0).getVilles();
+        for(Ville ville : villes){
+            System.out.println(ville.getName());
+        }
+        List<Entrepot> e =  reseau.getEntrepots();
+        for(Entrepot entrepot : e){
+            System.out.println(entrepot.getVilles());
+        }
+
+        System.out.println(dynamiqueResourceSharing.clusterToString());
+        //------------------------------------------------------------------------------------------------*/
 
         // Generer le fichier JSON
-        //TODO
-        JSONHandler.generateOutput(reseau);
+        JSONHandler.generateOutput(reseau,"output.json");
+        //TODO: add another json file for the other test case
     }
 
     //_______________________________________________________________________________
@@ -50,8 +88,8 @@ public class NetworkApp {
             while ((line = br.readLine()) != null) {
                 if (line.startsWith("City")) {
                     String[] parts = line.split(", ");
-                    String name = parts[0].split(": ")[0];
                     int id = Integer.parseInt(parts[0].split(" = ")[1]);
+                    String name = "City " + id;
                     int x = retrieveCoordinates(parts[1]);
                     int y = retrieveCoordinates(parts[2]);
                     int demand = Integer.parseInt(parts[3].split(" = ")[1].split(" ")[0]);
@@ -59,8 +97,8 @@ public class NetworkApp {
                     vertexList.add(new Ville(name, id, x, y, demand, priority));
                 } else if (line.startsWith("Warehouse ")) {
                     String[] parts = line.split(", ");
-                    String name = parts[0].split(": ")[0];
                     int id = Integer.parseInt(parts[0].split(" = ")[1]);
+                    String name = "Warehouse " + id;
                     int x = retrieveCoordinates(parts[1]);
                     int y = retrieveCoordinates(parts[2]);
                     int capacity = Integer.parseInt(parts[3].split(" = ")[1].split(" ")[0]);

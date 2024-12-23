@@ -28,7 +28,6 @@ public class Test {
         }
         //System.out.println("Edges: " + costs);
         System.out.println(reseau.toString());
-        JSONHandler.generateOutput(reseau);
 
 
     }
