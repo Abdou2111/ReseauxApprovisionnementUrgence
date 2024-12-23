@@ -123,29 +123,32 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
         return count;
     }
 
-    public void allocateResources(PriorityQueue<Ville> pQueue, List<Entrepot> entrepots){
-        while (!pQueue.isEmpty()){
-            Ville ville = pQueue.poll();
-            Entrepot bestEntrepot = findBestEntrepot(ville, entrepots);
-            double niveauDemande = ville.getDemande();
-            double capacite = bestEntrepot.getCapacite();
+    public void allocateResources(PriorityQueue<Ville> pQueue, List<Entrepot> entrepots) throws NullPointerException {
+        try {
+            while (!pQueue.isEmpty()){
+                Ville ville = pQueue.poll();
+                Entrepot bestEntrepot = findBestEntrepot(ville, entrepots);
+                double niveauDemande = ville.getDemande();
+                double capacite = bestEntrepot.getCapacite();
 
-            // Allocate resources from bestEntrepot to ville
-            if (niveauDemande <= capacite){
-                // Si la demande est inférieure à la capacité de l'entrepot
-                bestEntrepot.setCapacite(capacite - niveauDemande);
-                ville.setDemande(0);
-            } else {
-                // Si la demande est supérieure à la capacité de l'entrepot
-                bestEntrepot.setCapacite(0);
-                ville.setDemande(niveauDemande - capacite);
-                pQueue.add(ville);
+                // Allocate resources from bestEntrepot to ville
+                if (niveauDemande <= capacite){
+                    // Si la demande est inférieure à la capacité de l'entrepot
+                    bestEntrepot.setCapacite(capacite - niveauDemande);
+                    ville.setDemande(0);
+                } else {
+                    // Si la demande est supérieure à la capacité de l'entrepot
+                    bestEntrepot.setCapacite(0);
+                    ville.setDemande(niveauDemande - capacite);
+                    pQueue.add(ville);
+                }
+                System.out.println("Allocating resources from " + bestEntrepot.getName() + " to " + ville.getName());
+                System.out.println("Remaining demand for " + ville.getName() + ": " + ville.getDemande());
+                System.out.println("Remaining capacity for " + bestEntrepot.getName() + ": " + bestEntrepot.getCapacite());
+                System.out.println();
             }
-
-            System.out.println("Allocating resources from " + bestEntrepot.getName() + " to " + ville.getName());
-            System.out.println("Remaining demand for " + ville.getName() + ": " + ville.getDemande());
-            System.out.println("Remaining capacity for " + bestEntrepot.getName() + ": " + bestEntrepot.getCapacite());
-            System.out.println();
+        } catch (NullPointerException e) {
+            System.out.println("All resources have been allocated");
         }
     };
 

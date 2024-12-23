@@ -1,6 +1,6 @@
 Cities:
 City A: ID = 1, Coordinates = (2, 3), Demand = 50 units, Priority = High
-City B: ID = 2, Coordinates = (5, 7), Demand = 30 units, Priority = Medium
+City B: ID = 2, Coordinates = (5, 7), Demand = 300 units, Priority = Medium
 City C: ID = 3, Coordinates = (8, 2), Demand = 50 units, Priority = Low
 
 Warehouses:
