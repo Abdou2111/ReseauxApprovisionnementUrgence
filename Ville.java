@@ -3,7 +3,7 @@
  * Elle représente un sommet dans notre graphe.
  */
 public class Ville extends AbstractVertex {
-    private int niveauDemande;  // La quantité demandée par la ville
+    private double niveauDemande;  // La quantité demandée par la ville
     private Priority priority;  // La priorité de la ville
 
     // ==================== Constructeur ====================
@@ -17,4 +17,12 @@ public class Ville extends AbstractVertex {
 
     @Override
     public AbstractVertex getElement() { return null; }
+
+    public double getDemande() {
+        return niveauDemande;
+    }
+
+    public void setDemande(double niveauDemande) {
+        this.niveauDemande = niveauDemande;
+    }
 }

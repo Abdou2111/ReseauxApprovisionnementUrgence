@@ -13,6 +13,15 @@ public class Entrepot extends AbstractVertex {
 
     @Override
     public AbstractVertex getElement() { return null; }
+
+    public double getCapacite() {
+        return capacity;
+    }
+
+    public void setCapacite(double capacity) {
+        this.capacity = capacity;
+    }
+
 }
 
 

@@ -1,13 +1,34 @@
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
     private Map<V, Map<V, E>> adjacencyMap;
 
     public EmergencySupplyNetwork() {
         adjacencyMap = new HashMap<>();
+    }
+
+    public void representGraph(){
+        // Ajout des sommets et des arêtes
+        for (AbstractVertex source : NetworkApp.vertices) {
+            for (AbstractVertex destination : NetworkApp.vertices) {
+                if (!source.equals(destination)) {
+                    this.insertEdge((V) source, (V) destination, (E) new Route(source, destination));
+                }
+            }
+        }
+
+        // Ajout des sommets dans la liste des villes et des entrepôts
+        for (AbstractVertex vertex : NetworkApp.vertices) {
+            if (vertex instanceof Ville) {
+                NetworkApp.villes.add((Ville) vertex);
+            }
+            else{
+                NetworkApp.entrepots.add((Entrepot) vertex);
+            }
+        }
+
+        // Ajout des arêtes dans la liste des routes
+        NetworkApp.routes = (Iterable<Route>) edges();
     }
 
 
@@ -100,6 +121,47 @@ public class EmergencySupplyNetwork<V, E> implements Graph<V, E> {
             }
         }
         return count;
+    }
+
+    public void allocateResources(PriorityQueue<Ville> pQueue, List<Entrepot> entrepots){
+        while (!pQueue.isEmpty()){
+            Ville ville = pQueue.poll();
+            Entrepot bestEntrepot = findBestEntrepot(ville, entrepots);
+            double niveauDemande = ville.getDemande();
+            double capacite = bestEntrepot.getCapacite();
+
+            // Allocate resources from bestEntrepot to ville
+            if (niveauDemande <= capacite){
+                // Si la demande est inférieure à la capacité de l'entrepot
+                bestEntrepot.setCapacite(capacite - niveauDemande);
+                ville.setDemande(0);
+            } else {
+                // Si la demande est supérieure à la capacité de l'entrepot
+                bestEntrepot.setCapacite(0);
+                ville.setDemande(niveauDemande - capacite);
+                pQueue.add(ville);
+            }
+
+            System.out.println("Allocating resources from " + bestEntrepot.getName() + " to " + ville.getName());
+            System.out.println("Remaining demand for " + ville.getName() + ": " + ville.getDemande());
+            System.out.println("Remaining capacity for " + bestEntrepot.getName() + ": " + bestEntrepot.getCapacite());
+            System.out.println();
+        }
+    };
+
+    public Entrepot findBestEntrepot(Ville ville, List<Entrepot> entrepots){
+        Entrepot bestEntrepot = null;
+        double minCost = Double.MAX_VALUE;
+
+        // Trouver l'entrepot avec le cout de transport le plus bas
+        for (Entrepot entrepot : entrepots) {
+            Route route = (Route) getEdge((V) ville, (V) entrepot);
+            if (route != null && route.getCost() < minCost && entrepot.getCapacite() > 0) {
+                minCost = route.getCost();
+                bestEntrepot = entrepot;
+            }
+        }
+        return bestEntrepot;
     }
 
     @Override

@@ -5,38 +5,16 @@ import java.util.*;
 
 public class NetworkApp {
     static AbstractVertex[] vertices;
-    private static Iterable<Route> routes;
-    private static List<Ville> villes = new ArrayList<>();
-    private static List<Entrepot> entrepots = new ArrayList<>();
+    static Iterable<Route> routes;
+    static List<Ville> villes = new ArrayList<>();
+    static List<Entrepot> entrepots = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
-        retrieveTest("tests/TestCase1.txt");
-        Graph<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
+        retrieveTest("tests/TestCase3.txt");
+        EmergencySupplyNetwork<AbstractVertex, Route> reseau = new EmergencySupplyNetwork<AbstractVertex, Route>();
 
         // Tache1: Initialisation du graphe_____________________________________________________
-
-        // Ajout des sommets et des arêtes
-        for (AbstractVertex source : vertices) {
-            for (AbstractVertex destination : vertices) {
-                if (!source.equals(destination)) {
-                    reseau.insertEdge(source, destination, new Route(source, destination));
-                }
-            }
-        }
-
-        // Ajout des sommets dans la liste des villes et des entrepôts
-        for (AbstractVertex vertex : vertices) {
-            if (vertex instanceof Ville) {
-                villes.add((Ville) vertex);
-            }
-            else{
-                entrepots.add((Entrepot) vertex);
-            }
-        }
-
-        // Ajout des arêtes dans la liste des routes
-        routes = reseau.edges();
-
+        reseau.representGraph();
         //Tache2: Allocation des ressources______________________________________________
 
         PriorityQueue<Ville> pQueue = new PriorityQueue<>(new PriorityComparator());
@@ -45,8 +23,17 @@ public class NetworkApp {
         for (Ville ville : villes) {
             pQueue.add(ville);
         }
+        reseau.allocateResources(pQueue, entrepots);
 
+        //Tache3: Redistribution des ressources______________________________________________
+        CapacityComparator capacityComparator = new CapacityComparator();
+        PriorityQueue<Entrepot> maxHeap = new PriorityQueue<>(capacityComparator.reversed());
+        PriorityQueue<Entrepot> minHeap = new PriorityQueue<>(capacityComparator);
 
+        ResourceRedistribution resourceRedistribution = new ResourceRedistribution(entrepots, maxHeap, minHeap);
+        resourceRedistribution.redistributeResources(maxHeap, minHeap);
+        System.out.println("Max heap: " + maxHeap);
+        System.out.println("Min heap: " + minHeap);
 
 
         // Generer le fichier JSON

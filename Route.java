@@ -25,8 +25,6 @@ public class Route implements Edge<Double> {
     // ==================== Getter ====================
     public AbstractVertex[] getEndpoints() { return endpoints; }
 
-    public Route getRoute() { return this; }
-
     @Override
     public Double getCost() { return cost; }
     
