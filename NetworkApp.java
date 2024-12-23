@@ -11,7 +11,10 @@ public class NetworkApp {
     static List<Allocation> allocations = new ArrayList<>();
     static List<Double> remainingCapacities = new ArrayList<>();
     static List<Transfer> transfers = new ArrayList<>();
-    static List<Cluster> initialClusters = new ArrayList<>();
+    static List<Set<Ville>> initialClusters= new ArrayList<>();
+    static List<Set<Ville>> finalClusters= new ArrayList<>();
+    static List<MergingStep> mergingSteps = new ArrayList<>();
+    static List<QueryResult> queryResults = new ArrayList<>();
 
     public static void main(String[] args) throws IOException {
         retrieveTest("tests/TestCase3.txt");
@@ -58,8 +61,24 @@ public class NetworkApp {
         //Tache4: Partage dynamique des ressources entre les villes______________________________________
         DynamiqueResourceSharing dynamiqueResourceSharing = new DynamiqueResourceSharing(villes);
 
-        System.out.println("Clusters:" + dynamiqueResourceSharing.getClusters());
+        System.out.println(dynamiqueResourceSharing.clustersToString());
+
+        List<Set<Ville>> initialClustersCopy = new ArrayList<>();
+        for (Set<Ville> cluster : dynamiqueResourceSharing.getClusters()) {
+            Set<Ville> clusterCopy = new HashSet<>(cluster);
+            initialClustersCopy.add(clusterCopy);
+        }
+        initialClusters = initialClustersCopy;
+
+
         dynamiqueResourceSharing.mergeClusters(entrepots, reseau);
+        finalClusters = dynamiqueResourceSharing.getClusters();
+
+        queryResults = dynamiqueResourceSharing.generateQueryResults(villes);
+        for (QueryResult result : queryResults) {
+            System.out.println(result);
+        }
+
 /*
         //------------------------------------------------------------------------------------------------
         Collection<Ville> villes = entrepots.get(0).getVilles();

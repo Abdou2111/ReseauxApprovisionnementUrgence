@@ -62,20 +62,20 @@ public class JSONHandler {
         return resourceAllocation;
     }
 
-    static Map<String, Object> generateClusters(DynamiqueResourceSharing dynamiqueResourceSharing) {
-        Map<java.lang.String, java.lang.Object> clustersMap = new HashMap<>();
-        int clusterId = 1;
-        for (Set<Ville> cluster : dynamiqueResourceSharing.getClusters()) {
-            List<java.lang.String> cityNames = new ArrayList<>();
-            for (Ville ville : cluster) {
-                cityNames.add(ville.getName());
+    public static Map<String, String> generateClusters(List<Set<Ville>> initialClusters) {
+        Map<String, String> clustersMap = new HashMap<>();
+        for (int i = 0; i < initialClusters.size(); i++) {
+            StringBuilder cluster = new StringBuilder();
+            for (Ville ville : initialClusters.get(i)) {
+                cluster.append(ville.getName()).append(", ");
             }
-            clustersMap.put("Cluster " + clusterId, cityNames);
-            clusterId++;
+            if (cluster.length() > 0) {
+                cluster.setLength(cluster.length() - 2); // Remove the trailing comma and space
+            }
+            clustersMap.put("Cluster " + (i+1), cluster.toString());
         }
         return clustersMap;
     }
-
     private static Map<String, Object> generateRemainingCapacities(List<Double> remainingCapacities) {
         Map<String, Object> remainingCapacitiesMap = new LinkedHashMap<>();
         for (int i = 0; i < remainingCapacities.size(); i++) {
@@ -106,25 +106,27 @@ public class JSONHandler {
     public static void generateOutput(Graph<AbstractVertex, Route> reseau, String path) throws IOException {
         Map<String, Object> output = new LinkedHashMap<>();
         Map<String, Object> task1and2 = new LinkedHashMap<>();
-        Map<String, Object> task3 = new HashMap<>();
-        Map<String, Object> task4 = new HashMap<>();
+        Map<String, Object> task3 = new LinkedHashMap<>();
+        Map<String, Object> task4 = new LinkedHashMap<>();
         Map<String, Object> graphRepresentation = new LinkedHashMap<>();
         Map<String, Object> resourceRedistribution = new LinkedHashMap<>();
-        Map<String, Object> finalResourceLevels = new HashMap<>();
-        Map<String, Object> dynamiqueResourceSharing = new HashMap<>();
+        Map<String, Object> finalResourceLevels = new LinkedHashMap<>();
+        Map<String, Object> dynamiqueResourceSharing = new LinkedHashMap<>();
 
-
-        // Ajout des objets Json dans l'objet graphRepresentation
+        // Add JSON objects to graphRepresentation
         graphRepresentation.put("Cost Matrix", generateCostMatrix(reseau));
         graphRepresentation.put("Resource Allocation", generateResourceAllocation(NetworkApp.allocations));
         graphRepresentation.put("Remaining Capacities", generateRemainingCapacities(NetworkApp.remainingCapacities));
 
-        // Ajout des objets Json dans l'objet resourceRedistribution
+        // Add JSON objects to resourceRedistribution
         resourceRedistribution.put("Transfers", generateTransferList(resourceRedistribution));
         resourceRedistribution.put("Final Resource Levels", generateFinalResourceLevels(finalResourceLevels));
 
-        // Ajout des objets Json dans l'objet dynamiqueResourceSharing
-        //dynamiqueResourceSharing.put("Initial Clusters", dynamiqueResourceSharing);
+        // Add JSON objects to dynamiqueResourceSharing
+        dynamiqueResourceSharing.put("Initial Clusters", generateClusters(NetworkApp.initialClusters));
+        dynamiqueResourceSharing.put("Merging Steps", NetworkApp.mergingSteps);
+        dynamiqueResourceSharing.put("Cluster Membership After Merging", generateClusters(NetworkApp.finalClusters));
+        dynamiqueResourceSharing.put("Query Results", NetworkApp.queryResults); // Ensure this line is last
 
         task1and2.put("Graph Representation", graphRepresentation);
         task3.put("Resource Redistribution", resourceRedistribution);
