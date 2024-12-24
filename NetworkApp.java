@@ -9,33 +9,47 @@ public class NetworkApp {
     // Liste des routes entre les sommets
     static Iterable<Route> routes; 
     // Liste des villes à gérer
-    static List<Ville> villes = new ArrayList<>(); 
+    static List<Ville> villes;
     // Liste des entrepôts
-    static List<Entrepot> entrepots = new ArrayList<>(); 
+    static List<Entrepot> entrepots;
     // Liste des allocations de ressources
-    static List<Allocation> allocations = new ArrayList<>(); 
+    static List<Allocation> allocations;
     // Capacités restantes des entrepôts
-    static List<Double> remainingCapacities = new ArrayList<>(); 
+    static List<Double> remainingCapacities;
     // Transferts de ressources entre entrepôts
-    static List<Transfer> transfers = new ArrayList<>(); 
+    static List<Transfer> transfers ;
     // Clusters initiaux des villes
-    static List<Set<Ville>> initialClusters= new ArrayList<>(); 
+    static List<Set<Ville>> initialClusters;
     // Clusters finaux après regroupements
-    static List<Set<Ville>> finalClusters= new ArrayList<>(); 
+    static List<Set<Ville>> finalClusters;
     // Résultats des requêtes sur les clusters
-    static List<QueryResult> queryResults = new ArrayList<>(); 
+    static List<QueryResult> queryResults;
 
 
     public static void main(String[] args) throws IOException {
         // Liste des fichiers de test et des fichiers de sortie associés
-        String[] testFiles = {"tests/TestCase1.txt", "tests/TestCase2.txt"};
-        String[] outputFiles = {"tests/Output_TestCase1.json", 
-                                "tests/Output_TestCase2.json"};
+        String[] testFiles = {"tests/TestCase2.txt", "tests/TestCase1.txt"};
+        String[] outputFiles = {"tests/Output_TestCase2.json",
+                                "tests/Output_TestCase1.json"};
 
         // Itérer sur chaque fichier de test pour le traiter
         for (int i = 0; i < testFiles.length; i++) {
+            // Initialiser les listes
+            init();
             processTestFile(testFiles[i], outputFiles[i]);
         }
+    }
+
+    private static void init(){
+        // Initialisation des listes
+        villes = new ArrayList<>();
+        entrepots = new ArrayList<>();
+        allocations = new ArrayList<>();
+        remainingCapacities = new ArrayList<>();
+        transfers = new ArrayList<>();
+        initialClusters = new ArrayList<>();
+        finalClusters = new ArrayList<>();
+        queryResults = new ArrayList<>();
     }
 
     /**

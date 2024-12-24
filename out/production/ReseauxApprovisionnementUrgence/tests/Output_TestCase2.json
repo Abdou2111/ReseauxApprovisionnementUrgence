@@ -2155,67 +2155,457 @@
       ],
       "Resource Allocation": [
         {
-          "City": "City 2",
+          "City": "City 1",
           "Priority": "HIGH",
-          "Allocated": 30,
+          "Allocated": 50,
           "Warehouse": "Warehouse 101"
         },
         {
           "City": "City 4",
           "Priority": "HIGH",
-          "Allocated": 50,
-          "Warehouse": "Warehouse 103"
+          "Allocated": 60,
+          "Warehouse": "Warehouse 108"
         },
         {
-          "City": "City 1",
-          "Priority": "MEDIUM",
+          "City": "City 16",
+          "Priority": "HIGH",
+          "Allocated": 10,
+          "Warehouse": "Warehouse 108"
+        },
+        {
+          "City": "City 34",
+          "Priority": "HIGH",
+          "Allocated": 90,
+          "Warehouse": "Warehouse 116"
+        },
+        {
+          "City": "City 16",
+          "Priority": "HIGH",
           "Allocated": 70,
+          "Warehouse": "Warehouse 107"
+        },
+        {
+          "City": "City 34",
+          "Priority": "HIGH",
+          "Allocated": 30,
+          "Warehouse": "Warehouse 126"
+        },
+        {
+          "City": "City 19",
+          "Priority": "HIGH",
+          "Allocated": 90,
+          "Warehouse": "Warehouse 109"
+        },
+        {
+          "City": "City 37",
+          "Priority": "HIGH",
+          "Allocated": 60,
+          "Warehouse": "Warehouse 126"
+        },
+        {
+          "City": "City 10",
+          "Priority": "HIGH",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 107"
+        },
+        {
+          "City": "City 40",
+          "Priority": "HIGH",
+          "Allocated": 75,
+          "Warehouse": "Warehouse 130"
+        },
+        {
+          "City": "City 43",
+          "Priority": "HIGH",
+          "Allocated": 95,
+          "Warehouse": "Warehouse 130"
+        },
+        {
+          "City": "City 22",
+          "Priority": "HIGH",
+          "Allocated": 50,
+          "Warehouse": "Warehouse 122"
+        },
+        {
+          "City": "City 37",
+          "Priority": "HIGH",
+          "Allocated": 50,
+          "Warehouse": "Warehouse 127"
+        },
+        {
+          "City": "City 10",
+          "Priority": "HIGH",
+          "Allocated": 25,
           "Warehouse": "Warehouse 101"
+        },
+        {
+          "City": "City 46",
+          "Priority": "HIGH",
+          "Allocated": 85,
+          "Warehouse": "Warehouse 131"
+        },
+        {
+          "City": "City 7",
+          "Priority": "HIGH",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 101"
+        },
+        {
+          "City": "City 13",
+          "Priority": "HIGH",
+          "Allocated": 65,
+          "Warehouse": "Warehouse 102"
+        },
+        {
+          "City": "City 7",
+          "Priority": "HIGH",
+          "Allocated": 45,
+          "Warehouse": "Warehouse 106"
+        },
+        {
+          "City": "City 25",
+          "Priority": "HIGH",
+          "Allocated": 50,
+          "Warehouse": "Warehouse 122"
+        },
+        {
+          "City": "City 49",
+          "Priority": "HIGH",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 131"
+        },
+        {
+          "City": "City 25",
+          "Priority": "HIGH",
+          "Allocated": 20,
+          "Warehouse": "Warehouse 111"
+        },
+        {
+          "City": "City 49",
+          "Priority": "HIGH",
+          "Allocated": 5,
+          "Warehouse": "Warehouse 130"
+        },
+        {
+          "City": "City 28",
+          "Priority": "HIGH",
+          "Allocated": 65,
+          "Warehouse": "Warehouse 115"
+        },
+        {
+          "City": "City 49",
+          "Priority": "HIGH",
+          "Allocated": 100,
+          "Warehouse": "Warehouse 135"
+        },
+        {
+          "City": "City 31",
+          "Priority": "HIGH",
+          "Allocated": 10,
+          "Warehouse": "Warehouse 115"
+        },
+        {
+          "City": "City 31",
+          "Priority": "HIGH",
+          "Allocated": 80,
+          "Warehouse": "Warehouse 124"
+        },
+        {
+          "City": "City 31",
+          "Priority": "HIGH",
+          "Allocated": 10,
+          "Warehouse": "Warehouse 117"
+        },
+        {
+          "City": "City 32",
+          "Priority": "MEDIUM",
+          "Allocated": 45,
+          "Warehouse": "Warehouse 127"
+        },
+        {
+          "City": "City 8",
+          "Priority": "MEDIUM",
+          "Allocated": 35,
+          "Warehouse": "Warehouse 106"
+        },
+        {
+          "City": "City 17",
+          "Priority": "MEDIUM",
+          "Allocated": 40,
+          "Warehouse": "Warehouse 109"
+        },
+        {
+          "City": "City 35",
+          "Priority": "MEDIUM",
+          "Allocated": 65,
+          "Warehouse": "Warehouse 117"
+        },
+        {
+          "City": "City 32",
+          "Priority": "MEDIUM",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 117"
+        },
+        {
+          "City": "City 47",
+          "Priority": "MEDIUM",
+          "Allocated": 60,
+          "Warehouse": "Warehouse 133"
+        },
+        {
+          "City": "City 17",
+          "Priority": "MEDIUM",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 104"
+        },
+        {
+          "City": "City 2",
+          "Priority": "MEDIUM",
+          "Allocated": 30,
+          "Warehouse": "Warehouse 102"
+        },
+        {
+          "City": "City 38",
+          "Priority": "MEDIUM",
+          "Allocated": 50,
+          "Warehouse": "Warehouse 129"
+        },
+        {
+          "City": "City 5",
+          "Priority": "MEDIUM",
+          "Allocated": 40,
+          "Warehouse": "Warehouse 102"
+        },
+        {
+          "City": "City 20",
+          "Priority": "MEDIUM",
+          "Allocated": 60,
+          "Warehouse": "Warehouse 111"
+        },
+        {
+          "City": "City 41",
+          "Priority": "MEDIUM",
+          "Allocated": 45,
+          "Warehouse": "Warehouse 129"
+        },
+        {
+          "City": "City 23",
+          "Priority": "MEDIUM",
+          "Allocated": 30,
+          "Warehouse": "Warehouse 111"
+        },
+        {
+          "City": "City 11",
+          "Priority": "MEDIUM",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 102"
+        },
+        {
+          "City": "City 44",
+          "Priority": "MEDIUM",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 129"
+        },
+        {
+          "City": "City 11",
+          "Priority": "MEDIUM",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 104"
+        },
+        {
+          "City": "City 44",
+          "Priority": "MEDIUM",
+          "Allocated": 30,
+          "Warehouse": "Warehouse 128"
+        },
+        {
+          "City": "City 50",
+          "Priority": "MEDIUM",
+          "Allocated": 85,
+          "Warehouse": "Warehouse 135"
+        },
+        {
+          "City": "City 26",
+          "Priority": "MEDIUM",
+          "Allocated": 40,
+          "Warehouse": "Warehouse 114"
+        },
+        {
+          "City": "City 50",
+          "Priority": "MEDIUM",
+          "Allocated": 5,
+          "Warehouse": "Warehouse 136"
+        },
+        {
+          "City": "City 14",
+          "Priority": "MEDIUM",
+          "Allocated": 45,
+          "Warehouse": "Warehouse 104"
+        },
+        {
+          "City": "City 29",
+          "Priority": "MEDIUM",
+          "Allocated": 40,
+          "Warehouse": "Warehouse 114"
+        },
+        {
+          "City": "City 32",
+          "Priority": "MEDIUM",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 118"
+        },
+        {
+          "City": "City 29",
+          "Priority": "MEDIUM",
+          "Allocated": 5,
+          "Warehouse": "Warehouse 112"
+        },
+        {
+          "City": "City 48",
+          "Priority": "LOW",
+          "Allocated": 35,
+          "Warehouse": "Warehouse 133"
+        },
+        {
+          "City": "City 42",
+          "Priority": "LOW",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 128"
+        },
+        {
+          "City": "City 36",
+          "Priority": "LOW",
+          "Allocated": 30,
+          "Warehouse": "Warehouse 118"
         },
         {
           "City": "City 3",
           "Priority": "LOW",
           "Allocated": 20,
-          "Warehouse": "Warehouse 102"
+          "Warehouse": "Warehouse 104"
+        },
+        {
+          "City": "City 24",
+          "Priority": "LOW",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 112"
+        },
+        {
+          "City": "City 9",
+          "Priority": "LOW",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 104"
+        },
+        {
+          "City": "City 6",
+          "Priority": "LOW",
+          "Allocated": 10,
+          "Warehouse": "Warehouse 103"
+        },
+        {
+          "City": "City 39",
+          "Priority": "LOW",
+          "Allocated": 35,
+          "Warehouse": "Warehouse 128"
+        },
+        {
+          "City": "City 30",
+          "Priority": "LOW",
+          "Allocated": 35,
+          "Warehouse": "Warehouse 118"
+        },
+        {
+          "City": "City 33",
+          "Priority": "LOW",
+          "Allocated": 40,
+          "Warehouse": "Warehouse 118"
+        },
+        {
+          "City": "City 15",
+          "Priority": "LOW",
+          "Allocated": 20,
+          "Warehouse": "Warehouse 103"
+        },
+        {
+          "City": "City 33",
+          "Priority": "LOW",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 128"
+        },
+        {
+          "City": "City 21",
+          "Priority": "LOW",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 112"
+        },
+        {
+          "City": "City 45",
+          "Priority": "LOW",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 133"
+        },
+        {
+          "City": "City 27",
+          "Priority": "LOW",
+          "Allocated": 20,
+          "Warehouse": "Warehouse 112"
+        },
+        {
+          "City": "City 45",
+          "Priority": "LOW",
+          "Allocated": 25,
+          "Warehouse": "Warehouse 132"
+        },
+        {
+          "City": "City 12",
+          "Priority": "LOW",
+          "Allocated": 15,
+          "Warehouse": "Warehouse 103"
+        },
+        {
+          "City": "City 18",
+          "Priority": "LOW",
+          "Allocated": 35,
+          "Warehouse": "Warehouse 121"
         }
       ],
       "Remaining Capacities": {
-        "Warehouse 101": 100.0,
-        "Warehouse 102": 150.0,
-        "Warehouse 103": 110.0,
-        "Warehouse 104": 120.0,
+        "Warehouse 101": 0.0,
+        "Warehouse 102": 0.0,
+        "Warehouse 103": 65.0,
+        "Warehouse 104": 0.0,
         "Warehouse 105": 190.0,
-        "Warehouse 106": 80.0,
-        "Warehouse 107": 95.0,
-        "Warehouse 108": 70.0,
-        "Warehouse 109": 130.0,
+        "Warehouse 106": 0.0,
+        "Warehouse 107": 0.0,
+        "Warehouse 108": 0.0,
+        "Warehouse 109": 0.0,
         "Warehouse 110": 150.0,
-        "Warehouse 111": 110.0,
-        "Warehouse 112": 195.0,
+        "Warehouse 111": 0.0,
+        "Warehouse 112": 130.0,
         "Warehouse 113": 120.0,
-        "Warehouse 114": 80.0,
-        "Warehouse 115": 75.0,
-        "Warehouse 116": 90.0,
-        "Warehouse 117": 100.0,
-        "Warehouse 118": 120.0,
+        "Warehouse 114": 0.0,
+        "Warehouse 115": 0.0,
+        "Warehouse 116": 0.0,
+        "Warehouse 117": 0.0,
+        "Warehouse 118": 0.0,
         "Warehouse 119": 110.0,
         "Warehouse 120": 130.0,
-        "Warehouse 121": 130.0,
-        "Warehouse 122": 100.0,
+        "Warehouse 121": 95.0,
+        "Warehouse 122": 0.0,
         "Warehouse 123": 140.0,
-        "Warehouse 124": 80.0,
+        "Warehouse 124": 0.0,
         "Warehouse 125": 110.0,
-        "Warehouse 126": 90.0,
-        "Warehouse 127": 95.0,
-        "Warehouse 128": 150.0,
-        "Warehouse 129": 120.0,
-        "Warehouse 130": 175.0,
-        "Warehouse 131": 100.0,
-        "Warehouse 132": 140.0,
-        "Warehouse 133": 110.0,
+        "Warehouse 126": 0.0,
+        "Warehouse 127": 0.0,
+        "Warehouse 128": 45.0,
+        "Warehouse 129": 0.0,
+        "Warehouse 130": 0.0,
+        "Warehouse 131": 0.0,
+        "Warehouse 132": 115.0,
+        "Warehouse 133": 0.0,
         "Warehouse 134": 120.0,
-        "Warehouse 135": 185.0,
-        "Warehouse 136": 100.0,
+        "Warehouse 135": 0.0,
+        "Warehouse 136": 95.0,
         "Warehouse 137": 105.0,
         "Warehouse 138": 130.0,
         "Warehouse 139": 90.0,
@@ -2227,140 +2617,206 @@
     "Resource Redistribution": {
       "Transfers": [
         {
-          "From": "Warehouse 103",
+          "From": "Warehouse 105",
           "To": "Warehouse 101",
           "Units": 50.0
         },
         {
+          "From": "Warehouse 140",
+          "To": "Warehouse 135",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 110",
+          "To": "Warehouse 133",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 123",
+          "To": "Warehouse 131",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 105",
+          "To": "Warehouse 130",
+          "Units": 50.0
+        },
+        {
           "From": "Warehouse 112",
+          "To": "Warehouse 129",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 120",
           "To": "Warehouse 102",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 138",
+          "To": "Warehouse 127",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 113",
+          "To": "Warehouse 106",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 134",
+          "To": "Warehouse 124",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 132",
+          "To": "Warehouse 122",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 125",
+          "To": "Warehouse 118",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 119",
+          "To": "Warehouse 117",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 137",
+          "To": "Warehouse 116",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 110",
+          "To": "Warehouse 115",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 140",
+          "To": "Warehouse 114",
+          "Units": 50.0
+        },
+        {
+          "From": "Warehouse 121",
+          "To": "Warehouse 111",
+          "Units": 45.0
+        },
+        {
+          "From": "Warehouse 136",
+          "To": "Warehouse 109",
+          "Units": 45.0
+        },
+        {
+          "From": "Warehouse 123",
+          "To": "Warehouse 126",
+          "Units": 40.0
+        },
+        {
+          "From": "Warehouse 139",
+          "To": "Warehouse 107",
+          "Units": 40.0
+        },
+        {
+          "From": "Warehouse 105",
+          "To": "Warehouse 104",
+          "Units": 40.0
+        },
+        {
+          "From": "Warehouse 120",
+          "To": "Warehouse 108",
+          "Units": 30.0
+        },
+        {
+          "From": "Warehouse 112",
+          "To": "Warehouse 108",
           "Units": 20.0
+        },
+        {
+          "From": "Warehouse 138",
+          "To": "Warehouse 107",
+          "Units": 10.0
+        },
+        {
+          "From": "Warehouse 134",
+          "To": "Warehouse 126",
+          "Units": 10.0
+        },
+        {
+          "From": "Warehouse 113",
+          "To": "Warehouse 104",
+          "Units": 10.0
+        },
+        {
+          "From": "Warehouse 138",
+          "To": "Warehouse 128",
+          "Units": 5.0
+        },
+        {
+          "From": "Warehouse 132",
+          "To": "Warehouse 111",
+          "Units": 5.0
+        },
+        {
+          "From": "Warehouse 103",
+          "To": "Warehouse 109",
+          "Units": 5.0
         }
       ],
       "Final Resource Levels": {
-        "Warehouse 101": 100.0,
-        "Warehouse 102": 150.0,
-        "Warehouse 103": 110.0,
-        "Warehouse 104": 120.0,
-        "Warehouse 105": 190.0,
-        "Warehouse 106": 80.0,
-        "Warehouse 107": 95.0,
-        "Warehouse 108": 70.0,
-        "Warehouse 109": 130.0,
-        "Warehouse 110": 150.0,
-        "Warehouse 111": 110.0,
-        "Warehouse 112": 175.0,
-        "Warehouse 113": 120.0,
-        "Warehouse 114": 80.0,
-        "Warehouse 115": 75.0,
-        "Warehouse 116": 90.0,
-        "Warehouse 117": 100.0,
-        "Warehouse 118": 120.0,
-        "Warehouse 119": 110.0,
-        "Warehouse 120": 130.0,
-        "Warehouse 121": 130.0,
-        "Warehouse 122": 100.0,
-        "Warehouse 123": 140.0,
-        "Warehouse 124": 80.0,
-        "Warehouse 125": 110.0,
-        "Warehouse 126": 90.0,
-        "Warehouse 127": 95.0,
-        "Warehouse 128": 150.0,
-        "Warehouse 129": 120.0,
-        "Warehouse 130": 175.0,
-        "Warehouse 131": 100.0,
-        "Warehouse 132": 140.0,
-        "Warehouse 133": 110.0,
-        "Warehouse 134": 120.0,
-        "Warehouse 135": 185.0,
-        "Warehouse 136": 100.0,
-        "Warehouse 137": 105.0,
-        "Warehouse 138": 130.0,
-        "Warehouse 139": 90.0,
-        "Warehouse 140": 150.0
+        "Warehouse 101": 50.0,
+        "Warehouse 102": 50.0,
+        "Warehouse 103": 60.0,
+        "Warehouse 104": 50.0,
+        "Warehouse 105": 50.0,
+        "Warehouse 106": 50.0,
+        "Warehouse 107": 50.0,
+        "Warehouse 108": 50.0,
+        "Warehouse 109": 50.0,
+        "Warehouse 110": 50.0,
+        "Warehouse 111": 50.0,
+        "Warehouse 112": 60.0,
+        "Warehouse 113": 60.0,
+        "Warehouse 114": 50.0,
+        "Warehouse 115": 50.0,
+        "Warehouse 116": 50.0,
+        "Warehouse 117": 50.0,
+        "Warehouse 118": 50.0,
+        "Warehouse 119": 60.0,
+        "Warehouse 120": 50.0,
+        "Warehouse 121": 50.0,
+        "Warehouse 122": 50.0,
+        "Warehouse 123": 50.0,
+        "Warehouse 124": 50.0,
+        "Warehouse 125": 60.0,
+        "Warehouse 126": 50.0,
+        "Warehouse 127": 50.0,
+        "Warehouse 128": 50.0,
+        "Warehouse 129": 50.0,
+        "Warehouse 130": 50.0,
+        "Warehouse 131": 50.0,
+        "Warehouse 132": 60.0,
+        "Warehouse 133": 50.0,
+        "Warehouse 134": 60.0,
+        "Warehouse 135": 50.0,
+        "Warehouse 136": 50.0,
+        "Warehouse 137": 55.0,
+        "Warehouse 138": 65.0,
+        "Warehouse 139": 50.0,
+        "Warehouse 140": 50.0
       }
     }
   },
   "Task 4": {
     "Dynamique Resource Sharing": {
       "Initial Clusters": {
-        "Cluster 6": "City 2",
-        "Cluster 52": "City 48",
-        "Cluster 7": "City 3",
-        "Cluster 51": "City 47",
-        "Cluster 8": "City 4",
-        "Cluster 50": "City 46",
-        "Cluster 9": "City 5",
-        "Cluster 12": "City 8",
-        "Cluster 11": "City 7",
-        "Cluster 10": "City 6",
-        "Cluster 54": "City 50",
-        "Cluster 53": "City 49",
-        "Cluster 16": "City 12",
-        "Cluster 15": "City 11",
-        "Cluster 14": "City 10",
-        "Cluster 13": "City 9",
-        "Cluster 19": "City 15",
-        "Cluster 18": "City 14",
-        "Cluster 17": "City 13",
-        "Cluster 1": "City 1",
-        "Cluster 2": "City 2",
-        "Cluster 3": "City 3",
-        "Cluster 4": "City 4",
-        "Cluster 5": "City 1",
-        "Cluster 41": "City 37",
-        "Cluster 40": "City 36",
-        "Cluster 45": "City 41",
-        "Cluster 44": "City 40",
-        "Cluster 43": "City 39",
-        "Cluster 42": "City 38",
-        "Cluster 49": "City 45",
-        "Cluster 48": "City 44",
-        "Cluster 47": "City 43",
-        "Cluster 46": "City 42",
-        "Cluster 30": "City 26",
-        "Cluster 34": "City 30",
-        "Cluster 33": "City 29",
-        "Cluster 32": "City 28",
-        "Cluster 31": "City 27",
-        "Cluster 38": "City 34",
-        "Cluster 37": "City 33",
-        "Cluster 36": "City 32",
-        "Cluster 35": "City 31",
-        "Cluster 39": "City 35",
-        "Cluster 23": "City 19",
-        "Cluster 22": "City 18",
-        "Cluster 21": "City 17",
-        "Cluster 20": "City 16",
-        "Cluster 27": "City 23",
-        "Cluster 26": "City 22",
-        "Cluster 25": "City 21",
-        "Cluster 24": "City 20",
-        "Cluster 29": "City 25",
-        "Cluster 28": "City 24"
-      },
-      "Merging Steps": [
-        {
-          "action": "Merge",
-          "cities": [
-            "City A",
-            "City B"
-          ],
-          "clusterAfterMerge": "Cluster 1"
-        }
-      ],
-      "Cluster Membership After Merging": {
         "Cluster 6": "City 6",
-        "Cluster 52": "City 3",
         "Cluster 7": "City 7",
-        "Cluster 51": "City 2, City 1",
         "Cluster 8": "City 8",
         "Cluster 50": "City 50",
         "Cluster 9": "City 9",
         "Cluster 12": "City 12",
         "Cluster 11": "City 11",
         "Cluster 10": "City 10",
-        "Cluster 53": "City 4",
         "Cluster 16": "City 16",
         "Cluster 15": "City 15",
         "Cluster 14": "City 14",
@@ -2404,868 +2860,82 @@
         "Cluster 29": "City 29",
         "Cluster 28": "City 28"
       },
+      "Merging Steps": [
+        {
+          "action": "Merge",
+          "cities": [
+            "City A",
+            "City B"
+          ],
+          "clusterAfterMerge": "Cluster 1"
+        }
+      ],
+      "Cluster Membership After Merging": {
+        "Cluster 6": "City 16",
+        "Cluster 7": "City 4",
+        "Cluster 8": "City 19",
+        "Cluster 9": "City 20, City 23, City 25",
+        "Cluster 12": "City 28",
+        "Cluster 11": "City 26",
+        "Cluster 10": "City 27, City 29, City 21, City 24",
+        "Cluster 16": "City 22",
+        "Cluster 15": "City 18",
+        "Cluster 14": "City 36, City 30, City 32",
+        "Cluster 13": "City 35, City 31",
+        "Cluster 19": "City 33, City 39, City 42, City 44",
+        "Cluster 18": "City 37",
+        "Cluster 17": "City 34",
+        "Cluster 1": "City 10, City 1",
+        "Cluster 2": "City 2, City 13, City 5",
+        "Cluster 3": "City 15, City 12, City 6",
+        "Cluster 4": "City 9, City 14, City 3, City 11, City 17",
+        "Cluster 5": "City 8, City 7",
+        "Cluster 23": "City 45",
+        "Cluster 22": "City 46",
+        "Cluster 21": "City 40, City 43",
+        "Cluster 20": "City 38, City 41",
+        "Cluster 26": "City 50",
+        "Cluster 25": "City 49",
+        "Cluster 24": "City 47, City 48"
+      },
       "Query Results": [
         {
           "query": "Are City 1 and City 2 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 3 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 4 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 5 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 6 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 7 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 8 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 9 in the same cluster?",
+          "result": "No"
+        },
+        {
+          "query": "Are City 1 and City 10 in the same cluster?",
           "result": "Yes"
         },
         {
-          "query": "Are City 1 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 1 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 2 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 5 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 6 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 7 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 8 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 9 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 10 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 11 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 12 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 13 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 14 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 15 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 16 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 17 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 18 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 19 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 20 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 21 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 22 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 23 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 24 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 25 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 26 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 27 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 28 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 29 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 30 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 31 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 32 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 33 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 34 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 35 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 36 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 37 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 38 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 39 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 40 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 41 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 42 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 43 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 44 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 45 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 46 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 47 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 48 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 49 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 50 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 1 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 2 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 5 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 6 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 7 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 8 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 9 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 10 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 11 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 12 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 13 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 14 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 15 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 16 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 17 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 18 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 19 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 20 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 21 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 22 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 23 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 24 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 25 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 26 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 27 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 28 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 29 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 30 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 31 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 32 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 33 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 34 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 35 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 36 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 37 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 38 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 39 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 40 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 41 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 42 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 43 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 44 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 45 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 46 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 47 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 48 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 49 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 2 and City 50 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 1 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 2 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 5 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 6 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 7 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 8 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 9 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 10 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 11 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 12 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 13 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 14 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 15 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 16 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 17 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 18 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 19 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 20 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 21 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 22 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 23 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 24 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 25 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 26 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 27 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 28 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 29 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 30 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 31 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 32 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 33 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 34 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 35 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 36 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 37 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 38 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 39 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 40 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 41 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 42 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 43 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 44 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 45 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 46 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 47 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 48 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 49 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 3 and City 50 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 1 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 2 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 5 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 6 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 7 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 8 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 9 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 10 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 11 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 12 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 13 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 14 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 15 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 16 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 17 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 18 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 19 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 20 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 21 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 22 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 23 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 24 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 25 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 26 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 27 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 28 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 29 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 30 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 31 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 32 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 33 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 34 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 35 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 36 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 37 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 38 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 39 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 40 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 41 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 42 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 43 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 44 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 45 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 46 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 47 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 48 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 49 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 4 and City 50 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 2 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 3 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 4 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 5 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 6 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 7 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 8 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 9 in the same cluster?",
-          "result": "No"
-        },
-        {
-          "query": "Are City 1 and City 10 in the same cluster?",
-          "result": "No"
-        },
-        {
           "query": "Are City 1 and City 11 in the same cluster?",
           "result": "No"
         },
@@ -3435,7 +3105,7 @@
         },
         {
           "query": "Are City 2 and City 5 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 2 and City 6 in the same cluster?",
@@ -3467,7 +3137,7 @@
         },
         {
           "query": "Are City 2 and City 13 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 2 and City 14 in the same cluster?",
@@ -3639,7 +3309,7 @@
         },
         {
           "query": "Are City 3 and City 9 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 3 and City 10 in the same cluster?",
@@ -3647,7 +3317,7 @@
         },
         {
           "query": "Are City 3 and City 11 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 3 and City 12 in the same cluster?",
@@ -3659,7 +3329,7 @@
         },
         {
           "query": "Are City 3 and City 14 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 3 and City 15 in the same cluster?",
@@ -3671,7 +3341,7 @@
         },
         {
           "query": "Are City 3 and City 17 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 3 and City 18 in the same cluster?",
@@ -4019,7 +3689,7 @@
         },
         {
           "query": "Are City 5 and City 13 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 5 and City 14 in the same cluster?",
@@ -4191,7 +3861,7 @@
         },
         {
           "query": "Are City 6 and City 12 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 6 and City 13 in the same cluster?",
@@ -4203,7 +3873,7 @@
         },
         {
           "query": "Are City 6 and City 15 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 6 and City 16 in the same cluster?",
@@ -4347,7 +4017,7 @@
         },
         {
           "query": "Are City 7 and City 8 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 7 and City 9 in the same cluster?",
@@ -4691,7 +4361,7 @@
         },
         {
           "query": "Are City 9 and City 11 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 9 and City 12 in the same cluster?",
@@ -4703,7 +4373,7 @@
         },
         {
           "query": "Are City 9 and City 14 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 9 and City 15 in the same cluster?",
@@ -4715,7 +4385,7 @@
         },
         {
           "query": "Are City 9 and City 17 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 9 and City 18 in the same cluster?",
@@ -5019,7 +4689,7 @@
         },
         {
           "query": "Are City 11 and City 14 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 11 and City 15 in the same cluster?",
@@ -5031,7 +4701,7 @@
         },
         {
           "query": "Are City 11 and City 17 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 11 and City 18 in the same cluster?",
@@ -5175,7 +4845,7 @@
         },
         {
           "query": "Are City 12 and City 15 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 12 and City 16 in the same cluster?",
@@ -5475,7 +5145,7 @@
         },
         {
           "query": "Are City 14 and City 17 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 14 and City 18 in the same cluster?",
@@ -6279,7 +5949,7 @@
         },
         {
           "query": "Are City 20 and City 23 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 20 and City 24 in the same cluster?",
@@ -6287,7 +5957,7 @@
         },
         {
           "query": "Are City 20 and City 25 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 20 and City 26 in the same cluster?",
@@ -6399,7 +6069,7 @@
         },
         {
           "query": "Are City 21 and City 24 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 21 and City 25 in the same cluster?",
@@ -6411,7 +6081,7 @@
         },
         {
           "query": "Are City 21 and City 27 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 21 and City 28 in the same cluster?",
@@ -6419,7 +6089,7 @@
         },
         {
           "query": "Are City 21 and City 29 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 21 and City 30 in the same cluster?",
@@ -6623,7 +6293,7 @@
         },
         {
           "query": "Are City 23 and City 25 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 23 and City 26 in the same cluster?",
@@ -6735,7 +6405,7 @@
         },
         {
           "query": "Are City 24 and City 27 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 24 and City 28 in the same cluster?",
@@ -6743,7 +6413,7 @@
         },
         {
           "query": "Are City 24 and City 29 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 24 and City 30 in the same cluster?",
@@ -7031,7 +6701,7 @@
         },
         {
           "query": "Are City 27 and City 29 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 27 and City 30 in the same cluster?",
@@ -7295,7 +6965,7 @@
         },
         {
           "query": "Are City 30 and City 32 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 30 and City 33 in the same cluster?",
@@ -7311,7 +6981,7 @@
         },
         {
           "query": "Are City 30 and City 36 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 30 and City 37 in the same cluster?",
@@ -7383,7 +7053,7 @@
         },
         {
           "query": "Are City 31 and City 35 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 31 and City 36 in the same cluster?",
@@ -7459,7 +7129,7 @@
         },
         {
           "query": "Are City 32 and City 36 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 32 and City 37 in the same cluster?",
@@ -7539,7 +7209,7 @@
         },
         {
           "query": "Are City 33 and City 39 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 33 and City 40 in the same cluster?",
@@ -7551,7 +7221,7 @@
         },
         {
           "query": "Are City 33 and City 42 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 33 and City 43 in the same cluster?",
@@ -7559,7 +7229,7 @@
         },
         {
           "query": "Are City 33 and City 44 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 33 and City 45 in the same cluster?",
@@ -7827,7 +7497,7 @@
         },
         {
           "query": "Are City 38 and City 41 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 38 and City 42 in the same cluster?",
@@ -7875,7 +7545,7 @@
         },
         {
           "query": "Are City 39 and City 42 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 39 and City 43 in the same cluster?",
@@ -7883,7 +7553,7 @@
         },
         {
           "query": "Are City 39 and City 44 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 39 and City 45 in the same cluster?",
@@ -7919,7 +7589,7 @@
         },
         {
           "query": "Are City 40 and City 43 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 40 and City 44 in the same cluster?",
@@ -7991,7 +7661,7 @@
         },
         {
           "query": "Are City 42 and City 44 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 42 and City 45 in the same cluster?",
@@ -8107,7 +7777,7 @@
         },
         {
           "query": "Are City 47 and City 48 in the same cluster?",
-          "result": "No"
+          "result": "Yes"
         },
         {
           "query": "Are City 47 and City 49 in the same cluster?",
